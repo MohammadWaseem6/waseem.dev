@@ -1,57 +1,26 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-interface NavItems {
-    Home: string;
-    About: string;
-    Contact: string;
-    Resume: string;
-}
+import React from "react";
+import { motion } from "framer-motion";
 
-const navItems: NavItems[] = [
-    {
-        Home: 'Home',
-        About: 'About',
-        Contact: 'Contact',
-        Resume: 'Resume'
-    },
-];
+const navItems: string[] = ["Home", "About", "Contact", "Resume"];
 
 const Navbar: React.FC = () => {
-    return (
-        <div className="flex justify-center sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center h-[50px]  pt-10 w-full">
-            <div className="w-[30%] rounded-4xl h-[70px] col-span-1 bg-black flex items-center justify-center gap-5 text-white font-bold border-1 border-white">
-                {navItems.map((item, index) => (
-                    <motion.div
+  return (
+    <div className="flex justify-center items-center bg-gray-900 inset-0 w-full">
+      <div className="w-[30%] rounded-4xl mt-8  h-[70px] bg-black flex items-center justify-center gap-5 text-white font-bold border border-white">
+        {navItems.map((item, index) => (
+          <motion.a
+            key={index}
+            href={`#${item.toLowerCase()}`} 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="hover:underline"
+          >
+            {item}
+          </motion.a>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-                        key={index}
-                        className="flex justify-around w-full"
-                    >
-                        <motion.a href="#"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onHoverStart={() => console.log('hover started!')}
-                            className="hover:underline">{item.Home}</motion.a>
-                        <motion.a href="#"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onHoverStart={() => console.log('hover started!')}
-                            className="hover:underline">{item.About}</motion.a>
-                        <motion.a href="#"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onHoverStart={() => console.log('hover started!')}
-                            className="hover:underline">{item.Contact}</motion.a>
-                        <motion.a href="#"
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onHoverStart={() => console.log('hover started!')}
-                            className="hover:underline">{item.Resume}</motion.a>
-                    </motion.div>
-                ))}
-
-            </div>
-        </div >
-    )
-}
-
-export default Navbar
+export default Navbar;

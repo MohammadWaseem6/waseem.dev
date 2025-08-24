@@ -1,29 +1,84 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-
+import React from "react";
+import { motion } from "framer-motion";
 
 const Home: React.FC = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-900">
-            <div className='bg-amber-500 w-[70%] grid grid-cols-4 sm:grid-cols-2 rounded-2xl p-8 shadow-lg'>
-                
-                
-                <motion.div className='col-span-2 flex flex-col justify-center items-center text-center'>
-                    <h1 className='text-6xl font-bold text-white'>Hello, I'm Waseem</h1>
-                    <p className='text-2xl text-white mt-4'>A passionate frontend developer</p>
+
+            <div className="relative bg-gray-500 w-[90%] md:w-[70%] h-[400px] grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-lg overflow-hidden">
+
+
+                <motion.div
+                    className="absolute inset-0 -skew-x-12"
+                    initial={{ x: "-100%" }}
+                    animate={{ x: "200%" }}
+                    transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        ease: "linear"
+                    }}
+                >
+                    <div className="w-1/3 h-full bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
                 </motion.div>
 
-                
-                <div className='col-span-2 flex justify-center items-center'>
-                    <img 
-                        src="/src/assets/IMG_2283-Photoroom.png" 
-                        alt="Profile" 
-                        className='rounded-full w-48 h-48 object-cover border-4 border-white shadow-lg'
+
+                <motion.div
+                    className="flex flex-col justify-center items-center text-center p-6 relative z-10"
+                    initial={{ x: -50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <h1 className="text-4xl md:text-5xl font-bold text-white">
+                        Hello, I'm{" "}
+                        <motion.span
+                            initial={{ opacity: 0 }}
+                            animate={{
+                                opacity: 5,
+                                color: [
+                                    "#f87195", // red
+                                    "#60a5fa", // blue
+                                    "#34f399", // green
+                                    "#fbbf24", // yellow
+                                    "#a78bfa", // purple
+                                    "#f87175", // red again
+                                ],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                                repeatType: "mirror",
+                            }}
+                            className="font-extrabold"
+                        >
+                            Waseem
+                        </motion.span>
+                    </h1>
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.5 }}
+                        className="text-xl md:text-2xl text-gray-200 mt-4"
+                    >
+                        A passionate frontend developer
+                    </motion.p>
+                </motion.div>
+
+
+                <motion.div
+                    className="flex justify-center items-center relative z-10"
+                    initial={{ x: 50, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    <img
+                        src="/src/assets/IMG_2283-Photoroom.png"
+                        alt="Profile"
+                        className="rounded-full w-40 h-40 md:w-48 md:h-48 object-cover border-4 border-white shadow-lg"
                     />
-                </div>
+                </motion.div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Home
+export default Home;
