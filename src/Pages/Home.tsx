@@ -28,19 +28,19 @@ const Home: React.FC = () => {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold text-white">
+                    <h1 className="text-4xl md:text-5xl font-serif text-white">
                         Hello, I'm{" "}
                         <motion.span
                             initial={{ opacity: 0 }}
                             animate={{
                                 opacity: 5,
                                 color: [
-                                    "#f87195", // red
-                                    "#60a5fa", // blue
-                                    "#34f399", // green
-                                    "#fbbf24", // yellow
-                                    "#a78bfa", // purple
-                                    "#f87175", // red again
+                                    "#f87195",
+                                    "#60a5fa",
+                                    "#34f399",
+                                    "#fbbf24",
+                                    "#a78bfa",
+                                    "#f87175",
                                 ],
                             }}
                             transition={{
