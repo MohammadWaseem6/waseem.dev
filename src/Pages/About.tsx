@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { ImHtmlFive } from "react-icons/im";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
-
 import { RiTailwindCssFill } from 'react-icons/ri';
 
 const About: React.FC = () => {
@@ -35,7 +34,7 @@ const About: React.FC = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
 
                 className="w-full sm:w-[80%] md:w-[40%] rounded-3xl p-6 flex flex-wrap justify-center items-center h-[300px] gap-6 text-gray-300 font-bold shadow-lg
-        hover:shadow-cyan-600 hover:shadow-xg transition-all duration-300
+        hover:shadow-cyan-600 hover:shadow-lg transition-all duration-300
         "
             >
 
