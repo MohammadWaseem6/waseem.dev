@@ -20,16 +20,16 @@ const projectData: Project[] = [
 const Projects: React.FC = () => {
   return (
     <div className="relative min-h-screen flex flex-col justify-center items-center text-white p-6 overflow-hidden">
-      {/* Animated gradient background */}
+     
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-gray-900 to-cyan-900 animate-gradient" />
 
-      {/* Overlay code background image */}
+      
       <div 
         className="absolute inset-0 opacity-10"
         style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/codes.png')" }}
       />
 
-      {/* Floating particles */}
+   
       <motion.div
         className="absolute w-3 h-3 bg-cyan-400 rounded-full"
         animate={{ y: [0, -50, 0], opacity: [1, 0.5, 1] }}
@@ -43,10 +43,10 @@ const Projects: React.FC = () => {
         style={{ top: "60%", left: "80%" }}
       />
 
-      {/* Title */}
+     
       <h1 className="text-3xl font-bold mb-8 z-10">My Projects</h1>
       
-      {/* Projects grid */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl w-full z-10">
         {projectData.map((project, index) => (
           <motion.div
