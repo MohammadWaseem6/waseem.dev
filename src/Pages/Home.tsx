@@ -4,19 +4,19 @@ import { motion } from "framer-motion";
 const Home: React.FC = () => {
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-900 px-4">
-            <div className="relative bg-gray-500 w-full md:w-[60%] min-h-[350px] md:min-h-[400px] grid grid-cols-1 md:grid-cols-2 rounded-3xl border-cyan-100 border-2 shadow-lg shadow-cyan-600 overflow-hidden p-6">
+            <div className="relative bg-gray-500 w-full md:w-[60%] min-h-[350px] md:min-h-[400px] grid grid-cols-1 md:grid-cols-2 rounded-3xl">
 
                 <motion.div
-                    className="absolute inset-0 -skew-x-12"
+                    className="absolute inset-0 -skew-x-12 hover:shadow-lg hover:shadow-cyan-600 transition-shadow duration-300"
                     initial={{ x: "-100%" }}
                     animate={{ x: "200%" }}
                     transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                 >
-                    <div className="w-1/3 h-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent"></div>
+                    <div className="w-1/3 h-full bg-gradient-to-r from-transparent via-cyan-500 to-transparent "></div>
                 </motion.div>
 
                 <motion.div
-                    className="flex flex-col justify-center items-center text-center relative z-10"
+                    className="flex flex-col justify-center items-center text-center relative z-10 "
                     initial={{ x: -50, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ duration: 1 }}
