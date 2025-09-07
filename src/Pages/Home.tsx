@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import image from '../assets/IMG_2283-Photoroom.png'
 
 interface HomeProps {
   id: string;
@@ -86,7 +87,7 @@ const Home: React.FC<HomeProps> = ({ id }) => {
             
             
             <img
-              src="/src/assets/IMG_2283.JPG" 
+              src={image} 
               alt="Profile"
               className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover border-4 border-gray-700 shadow-lg relative z-10"
               onError={(e) => {
