@@ -3,6 +3,7 @@ import Navbar from './Pages/Navbar'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Projects from './Pages/Projects'
+import Footer from './Pages/Footer'
 
 const App: React.FC = () => {
   return (
@@ -10,7 +11,8 @@ const App: React.FC = () => {
       <Navbar />
       <Home />
       <About />
-      <Projects />
+      <Projects/>
+      <Footer/>
      
     </div>
   )

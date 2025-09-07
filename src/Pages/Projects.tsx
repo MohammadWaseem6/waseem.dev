@@ -1,77 +1,133 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaReact } from 'react-icons/fa';
 
 interface Project {
   id: number;
   title: string;
   description: string;
   link: string;
+  technologies: string[];
 }
 
-const projectData: Project[] = [
-  { id: 1, title: "Project 1", description: "Description of Project 1", link: "https://devwacryptocap.vercel.app/" },
-  { id: 2, title: "Project 2", description: "Description of Project 2", link: "https://mycarrent-seven.vercel.app/" },
-  { id: 3, title: "Project 3", description: "Description of Project 3", link: "https://mycarrent-seven.vercel.app/" },
-  { id: 4, title: "Project 4", description: "Description of Project 4", link: "https://mycarrent-seven.vercel.app/" },
-  { id: 5, title: "Project 5", description: "Description of Project 5", link: "https://mycarrent-seven.vercel.app/" },
-  { id: 6, title: "Project 6", description: "Description of Project 6", link: "https://mycarrent-seven.vercel.app/" },
-];
+interface ProjectsProps {
+  id: string;
+}
 
-const Projects: React.FC = () => {
+const Projects: React.FC<ProjectsProps> = ({ id }) => {
+  const projectData: Project[] = [
+    { 
+      id: 1, 
+      title: "Crypto Market Cap", 
+      description: "A cryptocurrency tracking application with real-time data visualization and portfolio management features.", 
+      link: "https://mycarrent-seven.vercel.app/",
+      technologies: ["React", "TypeScript", "Tailwind CSS", "API Integration"]
+    },
+    { 
+      id: 2, 
+      title: "Car Rental Platform", 
+      description: "A full-featured car rental application with search, filtering, booking, and payment processing capabilities.", 
+      link: "https://devwacryptocap.vercel.app/",
+      technologies: ["React", "Node.js", "MongoDB", "tailwind"]
+    },
+    { 
+      id: 3, 
+      title: "E-Commerce Store", 
+      description: "A modern e-commerce platform with product catalog, shopping cart, user authentication, and admin dashboard.", 
+      link: "#",
+      technologies: ["React", "Redux", "tailwind"]
+    },
+    { 
+      id: 4, 
+      title: "Task Management App", 
+      description: "A productivity application for managing tasks with drag-and-drop functionality and team collaboration features.", 
+      link: "#",
+      technologies: ["React", "TypeScript", "Framer Motion", "Mongodb"]
+    },
+    { 
+      id: 5, 
+      title: "Weather Dashboard", 
+      description: "A weather application providing forecasts, historical data, and interactive maps with location-based services.", 
+      link: "#",
+      technologies: ["React", "Weather API", "Geolocation"]
+    },
+    { 
+      id: 6, 
+      title: "Social Media Analytics", 
+      description: "Dashboard for tracking social media metrics with data visualization and customizable reporting features.", 
+      link: "#",
+      technologies: ["React", "Node.js", "OAuth"]
+    },
+  ];
+
   return (
-    <div className="relative min-h-screen flex flex-col justify-center items-center text-white p-6 overflow-hidden">
-     
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-gray-900 to-cyan-900 animate-gradient" />
-
+    <section id={id} className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 px-4">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
       
-      <div 
-        className="absolute inset-0 opacity-10"
-        style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/codes.png')" }}
-      />
-
-   
-      <motion.div
-        className="absolute w-3 h-3 bg-cyan-400 rounded-full"
-        animate={{ y: [0, -50, 0], opacity: [1, 0.5, 1] }}
-        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-        style={{ top: "30%", left: "10%" }}
-      />
-      <motion.div
-        className="absolute w-2 h-2 bg-purple-400 rounded-full"
-        animate={{ y: [0, -70, 0], opacity: [1, 0.3, 1] }}
-        transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
-        style={{ top: "60%", left: "80%" }}
-      />
-
-     
-      <h1 className="text-3xl font-bold mb-8 z-10">My Projects</h1>
-      
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl w-full z-10">
-        {projectData.map((project, index) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.2, duration: 0.5 }}
-            whileHover={{ rotate: 5, scale: 1.05 }}
-            className="bg-gray-800 bg-opacity-80 p-6 rounded-3xl shadow-lg hover:shadow-cyan-600 transition-shadow duration-300 cursor-pointer"
-          >
-            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-            <p className="mb-4">{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cyan-400 hover:underline"
+      <div className="container mx-auto relative z-10">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold text-center text-white mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          My <span className="text-cyan-400">Projects</span>
+        </motion.h2>
+        
+        <motion.p 
+          className="text-gray-400 text-center max-w-2xl mx-auto mb-16"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+        >
+         <p className='text-red-500 text-4xl underline'>UNDER-CONSTRUCTION</p>
+          Here are some of my recent projects that showcase my skills and experience in web development.
+        </motion.p>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {projectData.map((project, index) => (
+            <motion.div
+              key={project.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.2, duration: 0.5 }}
+              whileHover={{ y: -10 }}
+              className="bg-gray-800/50 backdrop-blur-md p-6 rounded-3xl border border-cyan-500/20 shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer group"
             >
-              View Project
-            </a>
-          </motion.div>
-        ))}
+              <div className="mb-4 h-40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl flex items-center justify-center group-hover:from-cyan-500/20 group-hover:to-blue-500/20 transition-all duration-300">
+                <div className="text-5xl text-cyan-400 opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                  <FaReact />
+                </div>
+              </div>
+              
+              <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+              <p className="text-gray-400 text-sm mb-4">{project.description}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, i) => (
+                  <span key={i} className="px-2 py-1 bg-cyan-900/30 text-cyan-300 text-xs rounded-full">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-300"
+              >
+                View Project <span>→</span>
+              </a>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Projects
+export default Projects;
