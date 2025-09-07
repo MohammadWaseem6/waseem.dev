@@ -84,14 +84,14 @@ const Home: React.FC<HomeProps> = ({ id }) => {
               transition={{ duration: 2, repeat: Infinity }}
             ></motion.div>
             
-            {/* Replace this image path with your local image path */}
+            
             <img
               src="/src/assets/IMG_2283.JPG" 
               alt="Profile"
               className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover border-4 border-gray-700 shadow-lg relative z-10"
               onError={(e) => {
                 // Fallback to a placeholder image if the local image fails to load
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80";
+                (e.target as HTMLImageElement).src = "";
               }}
             />
           </div>
