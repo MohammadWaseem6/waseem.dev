@@ -90,8 +90,8 @@ const Home: React.FC<HomeProps> = ({ id }) => {
               alt="Profile"
               className="rounded-full w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 object-cover border-4 border-gray-700 shadow-lg relative z-10"
               onError={(e) => {
-                // Fallback to a placeholder image if the local image fails to load
-                (e.target as HTMLImageElement).src = "";
+               
+                (e.target as HTMLImageElement).src = "/src/assets/IMG_2283.JPG";
               }}
             />
           </div>
