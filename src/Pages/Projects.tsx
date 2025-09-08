@@ -82,7 +82,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-         <p className='text-red-500 text-4xl underline'>UNDER-CONSTRUCTION</p>
+         <p className='text-red-500 text-4xl underline font-extrabold'>UNDER-CONSTRUCTION</p>
           Here are some of my recent projects that showcase my skills and experience in web development.
         </motion.p>
         
