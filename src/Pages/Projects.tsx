@@ -16,28 +16,30 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ id }) => {
   const projectData: Project[] = [
+
+        
+{
+  id: 1,
+  title: "Smart Store Keeper",
+  description: "A full-stack inventory management system with real-time expiry tracking, AI-powered item extraction, analytics dashboard, and role-based authentication.",
+  link: "https://smart-storekeeper.vercel.app",
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "JWT"]
+},
     { 
-      id: 1, 
+      id: 2, 
       title: "Crypto Market Cap", 
       description: "A cryptocurrency tracking application with real-time data visualization and portfolio management features.", 
       link: "https://mycarrent-seven.vercel.app/",
       technologies: ["React", "TypeScript", "Tailwind CSS", "API Integration"]
     },
     { 
-      id: 2, 
+      id: 3, 
       title: "Car Rental Platform", 
       description: "A full-featured car rental application with search, filtering, booking, and payment processing capabilities.", 
       link: "https://devwacryptocap.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "tailwind"]
     },
-    
-{
-  id: 3,
-  title: "Smart Store Keeper",
-  description: "A full-stack inventory management system with real-time expiry tracking, AI-powered item extraction, analytics dashboard, and role-based authentication.",
-  link: "https://smart-storekeeper.vercel.app",
-  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "JWT"]
-},
+
     { 
       id: 4, 
       title: "Task Management App", 
