@@ -30,48 +30,13 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
       link: "https://devwacryptocap.vercel.app/",
       technologies: ["React", "Node.js", "MongoDB", "tailwind"]
     },
-    {
+    
+{
   id: 3,
   title: "Smart Store Keeper",
-  subtitle: "Expiry Tracker & Inventory Management",
-  description: "A full-stack inventory management system that helps businesses track product expiry dates, manage stock levels, and reduce waste. Features AI-powered item extraction from delivery notes, real-time analytics, expiry calendar view, and multi-role authentication.",
+  description: "A full-stack inventory management system with real-time expiry tracking, AI-powered item extraction, analytics dashboard, and role-based authentication.",
   link: "https://smart-storekeeper.vercel.app",
-  github: "https://github.com/MohammadWaseem6/EXPIRY-TRAKER",
-  technologies: [
-    "React 19",
-    "Vite",
-    "Tailwind CSS",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "JWT Auth",
-    "Recharts",
-    "Tesseract.js",
-    "Lucide React",
-    "REST API",
-    "Vercel",
-    "Render"
-  ],
-  features: [
-    "Real-time expiry tracking with color-coded status",
-    "AI-powered item extraction from images, PDFs, and Excel",
-    "Interactive analytics dashboard with charts",
-    "Expiry calendar view with monthly navigation",
-    "Bulk item import via CSV format",
-    "Stock health monitoring and low-stock alerts",
-    "Role-based authentication (JWT)",
-    "CSV export for inventory reports",
-    "Mobile-responsive dark UI",
-    "Category analytics with donut charts"
-  ],
-  liveDemo: "https://smart-storekeeper.vercel.app",
-  backend: "https://smart-store-keeper.onrender.com",
-  highlights: [
-    "Handles 160+ inventory items efficiently",
-    "AI extraction using Google Gemini & Tesseract OCR",
-    "Real-time sync with MongoDB Atlas",
-    "Deployed on Vercel (frontend) & Render (backend)"
-  ]
+  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "JWT"]
 },
     { 
       id: 4, 
