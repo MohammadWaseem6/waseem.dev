@@ -52,7 +52,7 @@ const Home: React.FC<HomeProps> = ({ id }) => {
             transition={{ duration: 1.5 }}
             className="text-lg sm:text-xl md:text-2xl text-gray-200 mt-2"
           >
-            A passionate frontend developer
+            A passionate PERN STACK developer
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
