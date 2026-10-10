@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useReducedMotion, type Variants } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import image from '../assets/IMG_2283-Photoroom.png';
 
 interface HomeProps {
@@ -9,11 +10,12 @@ interface HomeProps {
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-// TODO: replace with your real links
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/your-username', icon: FaGithub },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/your-username', icon: FaLinkedin },
-  { label: 'Email', href: 'mailto:you@example.com', icon: FaEnvelope },
+  { label: 'GitHub', href: 'https://github.com/MohammadWaseem6', icon: FaGithub },
+  // This is your LinkedIn feed link. Replace it with your profile URL (linkedin.com/in/...)
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/feed/', icon: FaLinkedin },
+  { label: 'X (Twitter)', href: 'https://x.com/MWaseem0110', icon: FaXTwitter },
+  { label: 'Email', href: 'mailto:mohammadwaseem001100@gmail.com', icon: FaEnvelope },
 ];
 
 const stack = ['React', 'TypeScript', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'];
