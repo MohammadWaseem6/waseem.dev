@@ -12,7 +12,8 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/MohammadWaseem6', icon: FaGithub },
-  // This is your LinkedIn feed link. Replace it with your profile URL (linkedin.com/in/...)
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/waseem-ahmad-ba1308203/?isSelfProfile=true', icon: FaLinkedIn },
+
   { label: 'LinkedIn', href: 'https://www.linkedin.com/feed/', icon: FaLinkedin },
   { label: 'X (Twitter)', href: 'https://x.com/MWaseem0110', icon: FaXTwitter },
   { label: 'Email', href: 'mailto:mohammadwaseem001100@gmail.com', icon: FaEnvelope },
