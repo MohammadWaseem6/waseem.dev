@@ -16,48 +16,52 @@ interface ProjectsProps {
 
 const Projects: React.FC<ProjectsProps> = ({ id }) => {
   const projectData: Project[] = [
-
-        
-{
-  id: 1,
-  title: "Smart Store Keeper",
-  description: "A full-stack inventory management system with real-time expiry tracking, AI-powered item extraction, analytics dashboard, and role-based authentication.",
-  link: "https://smart-storekeeper.vercel.app",
-  technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "JWT"]
-},
-    { 
-      id: 2, 
-      title: "Crypto Market Cap", 
-      description: "A cryptocurrency tracking application with real-time data visualization and portfolio management features.", 
+    {
+      id: 1,
+      title: "Smart Store Keeper",
+      description: "A full-stack inventory management system with real-time expiry tracking, AI-powered item extraction, analytics dashboard, and role-based authentication.",
+      link: "https://smart-storekeeper.vercel.app",
+      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Recharts", "JWT"]
+    },
+    {
+      id: 2,
+      title: "CreditWise",
+      description: "A gamified credit card management platform with JWT auth, card CRUD, payment tracking, XP/badges, payoff simulator, charts, and a leaderboard. Deployed on Vercel + Render + Neon PostgreSQL.",
+      link: "https://dev-waseem-credit-wise.vercel.app",
+      technologies: ["React", "TypeScript", "FastAPI", "PostgreSQL", "Tailwind CSS", "Recharts", "Framer Motion", "JWT"]
+    },
+    {
+      id: 3,
+      title: "Crypto Market Cap",
+      description: "A cryptocurrency tracking application with real-time data visualization and portfolio management features.",
       link: "https://mycarrent-seven.vercel.app/",
       technologies: ["React", "TypeScript", "Tailwind CSS", "API Integration"]
     },
-    { 
-      id: 3, 
-      title: "Car Rental Platform", 
-      description: "A full-featured car rental application with search, filtering, booking, and payment processing capabilities.", 
+    {
+      id: 4,
+      title: "Car Rental Platform",
+      description: "A full-featured car rental application with search, filtering, booking, and payment processing capabilities.",
       link: "https://devwacryptocap.vercel.app/",
-      technologies: ["React", "Node.js", "MongoDB", "tailwind"]
+      technologies: ["React", "Node.js", "MongoDB", "Tailwind"]
     },
-
-    { 
-      id: 4, 
-      title: "Task Management App", 
-      description: "A productivity application for managing tasks with drag-and-drop functionality and team collaboration features.", 
+    {
+      id: 5,
+      title: "Task Management App",
+      description: "A productivity application for managing tasks with drag-and-drop functionality and team collaboration features.",
       link: "#",
-      technologies: ["React", "TypeScript", "Framer Motion", "Mongodb"]
+      technologies: ["React", "TypeScript", "Framer Motion", "MongoDB"]
     },
-    { 
-      id: 5, 
-      title: "Weather Dashboard", 
-      description: "A weather application providing forecasts, historical data, and interactive maps with location-based services.", 
+    {
+      id: 6,
+      title: "Weather Dashboard",
+      description: "A weather application providing forecasts, historical data, and interactive maps with location-based services.",
       link: "#",
       technologies: ["React", "Weather API", "Geolocation"]
     },
-    { 
-      id: 6, 
-      title: "Social Media Analytics", 
-      description: "Dashboard for tracking social media metrics with data visualization and customizable reporting features.", 
+    {
+      id: 7,
+      title: "Social Media Analytics",
+      description: "Dashboard for tracking social media metrics with data visualization and customizable reporting features.",
       link: "#",
       technologies: ["React", "Node.js", "OAuth"]
     },
@@ -66,9 +70,9 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
   return (
     <section id={id} className="relative py-20 bg-gradient-to-br from-gray-900 to-gray-800 px-4">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-      
+
       <div className="container mx-auto relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold text-center text-white mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -77,18 +81,19 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
         >
           My <span className="text-cyan-400">Projects</span>
         </motion.h2>
-        
-        <motion.p 
+
+        <motion.p
           className="text-gray-400 text-center max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.8 }}
         >
-         <p className='text-red-500 text-4xl underline font-extrabold'>UNDER-CONSTRUCTION</p>
+          <span className='text-red-500 text-4xl underline font-extrabold'>UNDER-CONSTRUCTION</span>
+          <br />
           Here are some of my recent projects that showcase my skills and experience in web development.
         </motion.p>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {projectData.map((project, index) => (
             <motion.div
@@ -105,10 +110,10 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                   <FaReact />
                 </div>
               </div>
-              
+
               <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
               <p className="text-gray-400 text-sm mb-4">{project.description}</p>
-              
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, i) => (
                   <span key={i} className="px-2 py-1 bg-cyan-900/30 text-cyan-300 text-xs rounded-full">
@@ -116,7 +121,7 @@ const Projects: React.FC<ProjectsProps> = ({ id }) => {
                   </span>
                 ))}
               </div>
-              
+
               <a
                 href={project.link}
                 target="_blank"
